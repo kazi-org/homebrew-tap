@@ -7,34 +7,33 @@
 class Kazi < Formula
   desc "Reconciliation controller that drives a coding agent until goal predicates are true"
   homepage "https://github.com/kazi-org/kazi"
-  version "0.1.0"
+  version "0.1.1"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/kazi-org/kazi/releases/download/v0.1.0/kazi_macos_aarch64"
-      sha256 "63a093399d0d2c2807dd6c68bc66407a699d148faa3fb90154ec2314cd9cac26"
+      url "https://github.com/kazi-org/kazi/releases/download/v0.1.1/kazi_macos_aarch64"
+      sha256 "73a551c6e329b35d77be4b15acfd0f8b9c8b8c66b02ad828aac6363069708407"
     end
     # Intel macOS (x86_64) is not yet published (CI Intel-runner scarcity).
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/kazi-org/kazi/releases/download/v0.1.0/kazi_linux_x86_64"
-      sha256 "9a27e81bf33e006c507edd02d2a7d4488e3b53739ad5ea9bb4d73d0423bbe703"
+      url "https://github.com/kazi-org/kazi/releases/download/v0.1.1/kazi_linux_x86_64"
+      sha256 "c161b5921b78b7cfe25b66b27e2bb6d760a28a953206956513cbc4afd555cace"
     end
     on_arm do
-      url "https://github.com/kazi-org/kazi/releases/download/v0.1.0/kazi_linux_aarch64"
-      sha256 "23b9596b0286a119d9061728df22d4cc55fe15cc74567a12aafc4b35dcad39c2"
+      url "https://github.com/kazi-org/kazi/releases/download/v0.1.1/kazi_linux_aarch64"
+      sha256 "7a043514bb4a3dbd503a1de7c18213f26b3318a16de839030d60624ef9d2f07f"
     end
   end
 
   def install
-    # The release asset is a bare binary named kazi_<target>; install it as `kazi`.
     bin.install Dir["kazi_*"].first => "kazi"
   end
 
   test do
-    assert_match "kazi", shell_output("#{bin}/kazi --help")
+    assert_match "kazi", shell_output("#{bin}/kazi --version")
   end
 end
