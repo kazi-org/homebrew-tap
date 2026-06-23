@@ -13,17 +13,20 @@ class Kazi < Formula
   on_macos do
     on_arm do
       url "https://github.com/kazi-org/kazi/releases/download/v0.1.0/kazi_macos_aarch64"
-      sha256 "d2e01ecb3678882a1e1ab7824836aa4a6002b5425fda0d961523f9c513126b40"
+      sha256 "63a093399d0d2c2807dd6c68bc66407a699d148faa3fb90154ec2314cd9cac26"
     end
-    # Intel macOS (x86_64) is not yet published; see the kazi release workflow.
+    # Intel macOS (x86_64) is not yet published (CI Intel-runner scarcity).
   end
 
   on_linux do
     on_intel do
       url "https://github.com/kazi-org/kazi/releases/download/v0.1.0/kazi_linux_x86_64"
-      sha256 "a7e50a827f216d7c7524887e790f0a555fe1ad9d7afcf64fe9006803f91049ed"
+      sha256 "9a27e81bf33e006c507edd02d2a7d4488e3b53739ad5ea9bb4d73d0423bbe703"
     end
-    # ARM Linux (aarch64) is not yet published; see the kazi release workflow.
+    on_arm do
+      url "https://github.com/kazi-org/kazi/releases/download/v0.1.0/kazi_linux_aarch64"
+      sha256 "23b9596b0286a119d9061728df22d4cc55fe15cc74567a12aafc4b35dcad39c2"
+    end
   end
 
   def install
