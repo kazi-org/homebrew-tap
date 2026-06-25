@@ -2,24 +2,24 @@
 class Kazi < Formula
   desc "Reconciliation controller that drives a coding agent until goal predicates are true"
   homepage "https://github.com/kazi-org/kazi"
-  version "1.19.0"
+  version "1.20.0"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/kazi-org/kazi/releases/download/v1.19.0/kazi_macos_aarch64"
-      sha256 "59d06489a5451c4964e981aa2d258258e5133eba0b48e0b903f69ecf528fe49d"
+      url "https://github.com/kazi-org/kazi/releases/download/v1.20.0/kazi_macos_aarch64"
+      sha256 "553fdb0070f8569209662ae355f8551d65f62def1f4db3af08a96b6fcfb1bdcb"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/kazi-org/kazi/releases/download/v1.19.0/kazi_linux_x86_64"
-      sha256 "b0ec8bd62e0d1494b3d0992b54219280e174c4d5559b1ef826d5f9e44f97e1e4"
+      url "https://github.com/kazi-org/kazi/releases/download/v1.20.0/kazi_linux_x86_64"
+      sha256 "b5b1ef4e08f309a5385dc6602ea15a49e1fcfca745ddf7c4c12284a5b604787d"
     end
     on_arm do
-      url "https://github.com/kazi-org/kazi/releases/download/v1.19.0/kazi_linux_aarch64"
-      sha256 "e51ea8bc65d3d3ddd3cacd87bbe4e557efbf3ecf0ebb3f55c1ade564d44c8763"
+      url "https://github.com/kazi-org/kazi/releases/download/v1.20.0/kazi_linux_aarch64"
+      sha256 "26d0b8864a7810448513f667bcec1153b7debd42b8f8e67d3c21a962985793c8"
     end
   end
 
