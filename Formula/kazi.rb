@@ -10,12 +10,16 @@ class Kazi < Formula
       url "https://github.com/kazi-org/kazi/releases/download/v1.82.1/kazi_macos_aarch64"
       sha256 "f996f824554171cf85177a300f26f1991e740fa3ad173703177f8643412ca6cb"
     end
+    on_intel do
+      url "https://github.com/kazi-org/kazi/releases/download/v1.82.1/kazi_macos_x86_64"
+      sha256 "6fd945778228cb02283713675c19ebd55350143e8e3ae026390d4cf97f10ee1c"
+    end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/kazi-org/kazi/releases/download/v1.82.1/kazi_linux_x86_64"
-      sha256 "a0b97a7c4b8cf4ef9e290e441ea879fd9d4f79699659ebb79e4e7430f7718240"
+      sha256 "e4fe71c0bb675db3e642deb4d89bcb6cb74b5356144e6eb5f5f8e2b7fff01d99"
     end
     on_arm do
       url "https://github.com/kazi-org/kazi/releases/download/v1.82.1/kazi_linux_aarch64"
