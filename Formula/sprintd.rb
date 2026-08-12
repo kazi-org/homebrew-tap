@@ -6,21 +6,21 @@ require_relative "../lib/custom_download_strategy"
 class Sprintd < Formula
   desc "Token-free scheduler that dispatches deadline-bounded agent lanes and verifies them with acceptance predicates"
   homepage "https://github.com/kazi-org/sprintd"
-  version "0.1.3"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kazi-org/sprintd/releases/download/v0.1.3/sprintd_0.1.3_darwin_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "42b471b9bf3d8128652a36b72725b83d9bb520b869c4249a4dbeca6b1ac8efa6"
+      url "https://github.com/kazi-org/sprintd/releases/download/v0.2.0/sprintd_0.2.0_darwin_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "d60f4b296345c4e8f5337701f46f6c13cb2fb93f897da24fcafd188ca90c3986"
 
       define_method(:install) do
         bin.install "sprintd"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kazi-org/sprintd/releases/download/v0.1.3/sprintd_0.1.3_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "e2b7565215345e833ab00de88970a2667ddb43c4577df57d3824791748669b05"
+      url "https://github.com/kazi-org/sprintd/releases/download/v0.2.0/sprintd_0.2.0_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "73af8f4e458c0c8c5033e2a64e928ddf549ecf3d0a1cc96f5c8aa1e222877e88"
 
       define_method(:install) do
         bin.install "sprintd"
@@ -30,8 +30,8 @@ class Sprintd < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kazi-org/sprintd/releases/download/v0.1.3/sprintd_0.1.3_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "19db26bd9c19e5eed3a6c5675745ddc1316733edde25686ae9ba66cf6ca4f32b"
+      url "https://github.com/kazi-org/sprintd/releases/download/v0.2.0/sprintd_0.2.0_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "0a2e4647cacf747507aa2d61f2dfdc35b3e013a69f4094804a8257613c814501"
       define_method(:install) do
         bin.install "sprintd"
       end
