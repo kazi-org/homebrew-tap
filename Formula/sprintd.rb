@@ -5,21 +5,21 @@
 class Sprintd < Formula
   desc "Token-free scheduler that dispatches deadline-bounded agent lanes and verifies them with acceptance predicates"
   homepage "https://github.com/kazi-org/sprintd"
-  version "0.2.1"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kazi-org/sprintd/releases/download/v0.2.1/sprintd_0.2.1_darwin_amd64.tar.gz"
-      sha256 "0c20327259d9183d1a4dbad9d525baeee05692ecd4e7417b89020a02dfa25139"
+      url "https://github.com/kazi-org/sprintd/releases/download/v0.3.0/sprintd_0.3.0_darwin_amd64.tar.gz"
+      sha256 "6a0b8edef2420b975e9d151c03b30f3d97b6903022c5f16bc26a9234a874e276"
 
       define_method(:install) do
         bin.install "sprintd"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kazi-org/sprintd/releases/download/v0.2.1/sprintd_0.2.1_darwin_arm64.tar.gz"
-      sha256 "6316bd22d722b9ee699cbd751857b2b073c3986fab8855cf95166f8afe0946c2"
+      url "https://github.com/kazi-org/sprintd/releases/download/v0.3.0/sprintd_0.3.0_darwin_arm64.tar.gz"
+      sha256 "fa6b57d988e62ffb976e1be8a06ab4d78522b842ea88e9ed4ffb010758c33717"
 
       define_method(:install) do
         bin.install "sprintd"
@@ -29,8 +29,8 @@ class Sprintd < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kazi-org/sprintd/releases/download/v0.2.1/sprintd_0.2.1_linux_amd64.tar.gz"
-      sha256 "6d9f2fae69a6f4d50593f021f0a15819761eb23578ee56f33d2d2fcddf61f264"
+      url "https://github.com/kazi-org/sprintd/releases/download/v0.3.0/sprintd_0.3.0_linux_amd64.tar.gz"
+      sha256 "12fddb90068d9e059be4ef9c55baf10f332f424843b81035d1b63670459846cd"
       define_method(:install) do
         bin.install "sprintd"
       end
