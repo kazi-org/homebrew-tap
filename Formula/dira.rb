@@ -2,17 +2,25 @@
 class Dira < Formula
   desc "A memory of why, kept in the repo as plain files"
   homepage "https://github.com/kazi-org/dira"
-  version "0.1.0"
+  version "0.1.1"
   license "Apache-2.0"
 
   on_macos do
-    url "https://github.com/kazi-org/dira/releases/download/v0.1.0/dira_0.1.0_darwin_arm64.tar.gz"
-    sha256 "baf6eb74e99a3dd71628d48cba709ff2d34741575075edfa42fc20060d66b115"
+    on_arm do
+      url "https://github.com/kazi-org/dira/releases/download/v0.1.1/dira_0.1.1_darwin_arm64.tar.gz"
+      sha256 "7c9b62f58be5b5775315f957c676343fee03e7c0e322c83093d64388c70d1e38"
+    end
+    on_intel do
+      url "https://github.com/kazi-org/dira/releases/download/v0.1.1/dira_0.1.1_darwin_amd64.tar.gz"
+      sha256 "bd1100a65fa0c77e732b020227e55c2522bf02a81a65ca254cc600279a3258fa"
+    end
   end
 
   on_linux do
-    url "https://github.com/kazi-org/dira/releases/download/v0.1.0/dira_0.1.0_linux_amd64.tar.gz"
-    sha256 "2f7772996d798594b8b84caf962c55ddcf80be0d3cacdcc517feb1dfce489b79"
+    on_intel do
+      url "https://github.com/kazi-org/dira/releases/download/v0.1.1/dira_0.1.1_linux_amd64.tar.gz"
+      sha256 "7e5430afa7bd0a8d515f380c37c1fd69e2f1f189a055048adefe315742641d02"
+    end
   end
 
   def install
